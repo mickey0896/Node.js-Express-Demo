@@ -4,13 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "set DEBUG=app & nodemon app.js",
+    "debug": "set DEBUG=* & nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "chalk": "^4.1.2",
+    "cors": "^2.8.5",
     "debug": "^4.3.6",
-    "express": "^4.19.2"
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4"
+  },
+  "nodemonConfig": {
+    "restartable": "re",
+    "delay": 2000,
+    "env": {
+      "PORT": 3000
+    }
   }
 }
